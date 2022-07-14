@@ -1,6 +1,6 @@
 'use strict';
 
-require('./basic-setup');
+require('./setup-basic');
 
 const assert = require('assert');
 const timers = require('timers/promises');
