@@ -67,3 +67,5 @@ const value = api.context.with(contextD, function withContextD() {
 
 assert.equal(value, 'outer value', '.with() return value is synchronously returned');
 assert.equal(api.context.active(), root, 'root is active context');
+
+console.log('ok');

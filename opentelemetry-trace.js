@@ -1,7 +1,5 @@
 'use strict';
 
-require('./setup-basic');
-
 const assert = require('assert');
 const timers = require('timers/promises');
 const { trace, context, SpanStatusCode, SpanKind } = require('@opentelemetry/api');
@@ -192,6 +190,8 @@ async function run() {
     assert.equal(failedSpanWithStartedActiveContext.status.code, 2, 'span is failed');
     assert.ok(failedSubSpanWithStartedActiveContext, 'subspan is created');
     assert.equal(failedSubSpanWithStartedActiveContext.parentSpanId, failedSpanWithStartedActiveContext.spanContext().spanId, 'subspan has the correct parent');
+
+    console.log('ok');
 }
 
 run();

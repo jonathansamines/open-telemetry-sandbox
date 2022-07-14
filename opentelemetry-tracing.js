@@ -1,6 +1,4 @@
-'use strict'
-
-require('./setup-tracing');
+'use strict';
 
 const assert = require('assert');
 const { trace, context } = require('@opentelemetry/api');
@@ -139,6 +137,8 @@ async function run() {
     assert.ok(spanWithLinks, 'span was created');
     assert.ok(Array.isArray(spanWithLinks.links), 'links are present');
     assert.equal(spanWithLinks.links.length, 1, 'links are ok');
+
+    console.log('ok');
 }
 
 run();
